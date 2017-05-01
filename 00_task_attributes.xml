@@ -1,0 +1,36 @@
+﻿<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+  <Header action="write" externalSource="NIKU" objectType="contentPack" version="13.3.0.286"/>
+  <contentPack update="true">
+    <objects>
+        <object code="task" entityCodeAttribute="odf_entity_code" fiscalPeriodTypeAttribute="odf_period_type" parentObjectCode="inv" periodEndAttribute="odf_period_end" periodStartAttribute="odf_period_start" raiseEvents="true" source="niku.com" update="true">
+		 <nls description="The Task Object" languageCode="en" name="Task"/>
+          <customAttribute active="true" code="cabr_tsk_has_cst" column="cabr_tsk_has_cst" constant="false" currencyConnected="false" custom="true" dataSize="20" dataType="number" editable="true" extendedType="boolean" multiValued="false" partitionCode="NIKU.ROOT" partitionMode="PARTITION_AND_ANSTRS_DESDNTS" presenceRequired="false" private="false" required="false" unique="false" virtual="false">
+            <nls languageCode="cs" name="Cost Aggregation"/>
+            <nls languageCode="da" name="Cost Aggregation"/>
+            <nls languageCode="de" name="Cost Aggregation"/>
+            <nls languageCode="en" name="Cost Aggregation"/>
+            <nls languageCode="es" name="Cost Aggregation"/>
+            <nls languageCode="fi" name="Cost Aggregation"/>
+            <nls languageCode="fr" name="Cost Aggregation"/>
+            <nls languageCode="hu" name="Cost Aggregation"/>
+            <nls languageCode="it" name="Cost Aggregation"/>
+            <nls languageCode="ja" name="Cost Aggregation"/>
+            <nls languageCode="ko" name="Cost Aggregation"/>
+            <nls languageCode="nl" name="Cost Aggregation"/>
+            <nls languageCode="no" name="Cost Aggregation"/>
+            <nls languageCode="pl" name="Cost Aggregation"/>
+            <nls languageCode="pt" name="Agregação de Custos"/>
+            <nls languageCode="ru" name="Cost Aggregation"/>
+            <nls languageCode="sv" name="Cost Aggregation"/>
+            <nls languageCode="tr" name="Cost Aggregation"/>
+            <nls languageCode="zh" name="Cost Aggregation"/>
+            <nls languageCode="zh_TW" name="Cost Aggregation"/>
+            <default value="0"/>
+          </customAttribute>
+          <autonumbering/>
+        </object>
+    </objects>
+    <partitionModels/>
+  </contentPack>
+  
+</NikuDataBus>

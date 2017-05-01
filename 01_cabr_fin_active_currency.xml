@@ -1,0 +1,42 @@
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+  <Header action="write" externalSource="NIKU" objectType="contentPack" version="13.3.0.286"/>
+  <contentPack update="true">
+    <queries update="true">
+      <query code="cabr_fin_active_currency" isUserPortletAvailable="1" source="customer">
+        <nls languageCode="cs" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="da" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="de" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="en" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="es" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="fi" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="fr" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="hu" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="it" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="ja" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="ko" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="nl" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="no" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="pl" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="pt" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="ru" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="sv" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="tr" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="zh" name="CABR Financeiro Moedas ativas"/>
+        <nls languageCode="zh_TW" name="CABR Financeiro Moedas ativas"/>
+        <nsql dbId="Niku" dbVendor="all"><![CDATA[SELECT   @SELECT:DIM:USER_DEF:IMPLIED:CUR:c.currency_code:currency_code@,
+         @SELECT:DIM_PROP:USER_DEF:IMPLIED:CUR:c.currency_code:currency_name@
+FROM     cmn_currencies c
+WHERE   @FILTER@
+AND c.is_active = 1]]></nsql>
+        <attribute id="currency_code" required="false"/>
+        <attribute id="currency_name" required="false"/>
+      </query>
+    </queries>
+  </contentPack>
+  <XOGOutput>
+    <Object type="contentPack"/>
+    <Status state="SUCCESS"/>
+    <Statistics failureRecords="0" insertedRecords="0" totalNumberOfRecords="1" updatedRecords="0"/>
+    <Records/>
+  </XOGOutput>
+</NikuDataBus>

@@ -1,0 +1,73 @@
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+  <Header action="write" externalSource="NIKU" objectType="contentPack" version="13.3.0.286"/>
+  <contentPack update="true">
+    <queries update="true">
+      <query code="cabr_fin_export_proj_tsk_lst" isUserPortletAvailable="1" source="customer">
+        <nls languageCode="cs" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="da" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="de" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="en" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="es" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="fi" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="fr" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="hu" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="it" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="ja" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="ko" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="nl" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="no" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="pl" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="pt" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="ru" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="sv" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="tr" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="zh" name="CABR Projetos Importação Custos"/>
+        <nls languageCode="zh_TW" name="CABR Projetos Importação Custos"/>
+        <nsql dbId="Niku" dbVendor="all"><![CDATA[SELECT  
+@SELECT:DIM:USER_DEF:IMPLIED:cabr:a.prid:assign_id@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:t.project_code || ' - ' || t.prname || ' - ' ||  r.full_name:project_task_resource@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:t.project_code:project_code@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:t.project_name:project_name@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:t.odf_pk:task_id@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:t.prname:task_name@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:r.unique_name:resouce_code@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:r.full_name:resource_name@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:rol.unique_name:role_code@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:rol.full_name:role_name@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:rf.transclass:resource_transclass@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:tc.PREXTERNALID:input_type_code@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:p.npio_status:financial_status@,
+@SELECT:DIM_PROP:USER_DEF:IMPLIED:cabr:case r.resource_type when 0 then 'L' WHEN 1 then  'Q' WHEN 2 then 'M' WHEN 3 then 'X' end:resource_type@
+FROM odf_task_v2 t 
+INNER JOIN prassignment a on t.odf_pk = a.prtaskid
+INNER JOIN odf_project_v2 p on t.prprojectid = p.odf_pk
+INNER JOIN odf_resource_v2 r on a.prresourceid = r.odf_pk
+INNER JOIN PAC_MNT_RESOURCES rf on r.odf_pk = rf.id
+INNER JOIN PRTYPECODE tc on r.PRTYPECODEID = tc.prid
+
+LEFT JOIN srm_resources rol on a.role_id = rol.ID
+WHERE @FILTER@ AND t.cabr_tsk_has_cst = 1 AND r.prisrole = 0]]></nsql>
+        <attribute id="assign_id" required="false"/>
+        <attribute id="project_task_resource" required="false"/>
+        <attribute id="project_code" required="false"/>
+        <attribute id="project_name" required="false"/>
+        <attribute id="task_id" required="false"/>
+        <attribute id="task_name" required="false"/>
+        <attribute id="resouce_code" required="false"/>
+        <attribute id="resource_name" required="false"/>
+        <attribute id="role_code" required="false"/>
+        <attribute id="role_name" required="false"/>
+        <attribute id="financial_status" required="false"/>
+        <attribute id="resource_transclass" required="false"/>
+        <attribute id="input_type_code" required="false"/>
+        <attribute id="resource_type" required="false"/>
+      </query>
+    </queries>
+  </contentPack>
+  <XOGOutput>
+    <Object type="contentPack"/>
+    <Status state="SUCCESS"/>
+    <Statistics failureRecords="0" insertedRecords="0" totalNumberOfRecords="1" updatedRecords="0"/>
+    <Records/>
+  </XOGOutput>
+</NikuDataBus>

@@ -1,0 +1,44 @@
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+  <Header action="write" externalSource="NIKU" objectType="contentPack" version="13.3.0.286"/>
+  <contentPack update="true">
+    <queries update="true">
+      <query code="cabr_fin_charge_code" isUserPortletAvailable="1" source="customer">
+        <nls languageCode="cs" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="da" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="de" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="en" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="es" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="fi" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="fr" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="hu" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="it" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="ja" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="ko" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="nl" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="no" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="pl" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="pt" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="ru" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="sv" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="tr" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="zh" name="CABR Financeiro Código Encargo"/>
+        <nls languageCode="zh_TW" name="CABR Financeiro Código Encargo"/>
+        <nsql dbId="Niku" dbVendor="all"><![CDATA[SELECT   @SELECT:DIM:USER_DEF:IMPLIED:CABR:cc.prexternalid:UNIQUE_CODE@,
+         @SELECT:DIM_PROP:USER_DEF:IMPLIED:CABR:cc.prName:name@
+
+FROM     prchargecode cc
+
+WHERE    @FILTER@
+and cc.prisopen<>0]]></nsql>
+        <attribute id="unique_code" required="false"/>
+        <attribute id="name" required="false"/>
+      </query>
+    </queries>
+  </contentPack>
+  <XOGOutput>
+    <Object type="contentPack"/>
+    <Status state="SUCCESS"/>
+    <Statistics failureRecords="0" insertedRecords="0" totalNumberOfRecords="1" updatedRecords="0"/>
+    <Records/>
+  </XOGOutput>
+</NikuDataBus>

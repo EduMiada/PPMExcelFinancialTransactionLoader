@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_group.xsd">
+  <Header action="write" externalSource="NIKU" objectType="group" version="14.2.0.237"/>
+  <groups>
+    <group code="cabr_import_fin_trans" isActive="true">
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="ca" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="cs" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="da" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="de" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="en" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="es" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="fi" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="fr" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="hu" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="it" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="ja" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="ko" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="nl" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="no" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="pl" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="pt" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="ru" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="sv" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="tr" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="zh" name="Importação de transações financeiras"/>
+      <nls description="Grupo com permissões para importação de transações financeiras via XOG" languageCode="zh_TW" name="Importação de transações financeiras"/>
+      <members/>
+      <rights>
+        <GlobalRights>
+          <Right id="FIN_PRO_TXN_ENTRY"/>
+          <Right id="INBOUNDTRANSACTION_XOG_ACCESS"/>
+          <Right id="TRANSACTION_XOG_ACCESS"/>
+        </GlobalRights>
+        <InstanceRights/>
+        <InstanceOBSRights/>
+      </rights>
+    </group>
+  </groups>
+</NikuDataBus>
